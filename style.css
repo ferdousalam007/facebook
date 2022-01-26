@@ -1,0 +1,198 @@
+/*------------
+ common css
+ -------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ProximaNovaAl;
+    font-weight: normal;
+    font-style: normal;
+    overflow-x: hidden;
+    background: #18191A;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+/*------------
+   header css
+ -------------*/
+header {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #242526;
+    padding: 0 20px;
+    border-bottom: 1px solid #5555;
+}
+
+header a {
+    display: block;
+}
+
+.search_area .logo {
+    width: 40px;
+    height: 40px;
+}
+
+.search_area .logo img {
+    width: 100%;
+}
+
+.search {
+    width: 240px;
+    height: 40px;
+    background: #3a3b3c;
+    border-radius: 25px;
+}
+
+.search span {
+    color: #e4e6eb;
+    font-size: 18px;
+}
+
+.search input {
+    background: none;
+    border: none;
+    color: #e4e6eb;
+    flex-grow: 1;
+    height: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.search input:focus {
+    outline: none !important;
+    border-color: none;
+}
+
+nav ul li a {
+    padding: 6px 35px;
+    border-radius: 8px;
+    transition: .2s;
+    position: relative;
+}
+nav ul li:first-child a{
+    border-bottom: 3px solid #2374E1;
+    padding-top: 14px;
+    border-radius: 0;
+    color: rgb(24, 24, 148);
+}
+nav ul li:first-child a .material-icons-outlined{
+    color: #2374E1;
+}
+nav ul li a:hover {
+    background: #3f4142;
+}
+nav ul li a::after {
+    content: attr(data-tag);
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    width: 80px;
+    background: #e4e6eb;
+    text-align: center;
+    margin: 0 auto;
+    transition: .2s;
+    display: none;
+    font-size: 12px;
+    color: #717172;
+    padding: 7px 15px 5px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover:after {
+    display: block;
+}
+nav ul li a .material-icons-outlined{
+    color: #e4e6eb;
+    font-size: 28px;
+}
+.profile_pic{
+    border-radius: 25px;
+    margin-right: 4px;
+    padding: 5px 6px;
+    transition: .2s;
+    cursor: pointer;
+}
+.profile_pic:hover{
+    background: #3a3b3c;
+}
+.profile_section .profile_pic img{
+    border-radius: 50%;
+    color: #e4e6eb;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+.profile_section .profile_pic{
+    color: #e4e6eb;
+}
+.profile_section ul li span,.profile_section ul li i{
+    color: #e4e6eb;
+    font-size: 28px;
+    background: #3a3b3c;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 8px;
+    transition: .2s;
+    cursor: pointer;
+}
+.profile_section ul li:hover span,.profile_section ul li:hover i{
+    background: #474849;
+}
+.profile_section ul li{
+    position: relative;
+}
+.profile_section ul li::after {
+	content: attr(data-tag);
+	position: absolute;
+	bottom: -40px;
+	left: -42px;
+	right: 0;
+	height: 20px;
+	width: 45px;
+	background: #e4e6eb;
+	text-align: center;
+	margin: 0 auto;
+	transition: .2s;
+	display: none;
+	font-size: 12px;
+	color: #717172;
+	padding: 7px 50px 5px;
+	border-radius: 5px;
+}
+.profile_section ul li:hover::after{
+    display: block;
+} 
+.profile_section ul li:first-child::after{
+    display: none;
+}
+/*------------
+   header css
+ -------------*/
