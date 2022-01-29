@@ -13,6 +13,7 @@ body {
     overflow-x: hidden;
     background: #18191A;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -31,42 +32,49 @@ html {
     display: flex;
     align-items: center;
 }
-.f_right{
+
+.f_right {
     float: right;
 }
 
 /*------------
    header css
  -------------*/
- header {
-	height: 56px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: #242526;
-	padding: 0 20px;
-	border-bottom: 1px solid #5555;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+header {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #242526;
+    padding: 0 20px;
+    border-bottom: 1px solid #5555;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
-nav{
+
+nav {
     flex-grow: 1;
 }
-nav ul{
+
+nav ul {
     justify-content: center;
 }
-header ul li:last-child{
+
+header ul li:last-child {
     display: none;
 }
+
 header a {
     display: block;
 }
+
 .search_area {
-	flex-basis: 320px;
-	flex-grow: 0;
+    flex-basis: 320px;
+    flex-grow: 0;
 }
+
 .search_area .logo {
     width: 40px;
     height: 40px;
@@ -152,10 +160,12 @@ nav ul li a .material-icons-outlined {
     color: #e4e6eb;
     font-size: 28px;
 }
-.profile_section{
+
+.profile_section {
     flex-basis: 350px;
     flex-grow: 0;
 }
+
 .profile_pic {
     border-radius: 25px;
     margin-right: 4px;
@@ -238,7 +248,7 @@ nav ul li a .material-icons-outlined {
 }
 
 .separator {
-    width: 100%;
+    width: 98%;
     height: 1px;
     background: #3a3b3c;
     margin-top: 10px;
@@ -255,6 +265,42 @@ nav ul li a .material-icons-outlined {
     height: 100vh;
     flex-shrink: 0;
     padding-top: 75px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/* scrollbar  */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left_area:hover::-webkit-scrollbar-thumb {
+    background-color: #3e4042;
+    border-radius: 25px;
+}
+
+.right_area:hover::-webkit-scrollbar-thumb {
+    /* background: #888; */
+    background-color: #3e4042;
+    border-radius: 25px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /* background: #888; */
+    background-color: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 25px;
 }
 
 /*------------
@@ -262,8 +308,7 @@ nav ul li a .material-icons-outlined {
  -------------*/
 .left_area {
     background: #18191A;
-    padding: 20px;
-    overflow: auto;
+    padding: 75px 0px 0px 10px;
 }
 
 .profile_area ul li a {
@@ -293,6 +338,13 @@ nav ul li a .material-icons-outlined {
     align-items: center;
     color: #E4E6EB;
     padding: 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.collapse:hover {
+    background: #303031;
 }
 
 .collapse span {
@@ -359,12 +411,210 @@ nav ul li a .material-icons-outlined {
     overflow: auto;
     padding-top: 75px;
     overflow: auto;
-    background: #1947bb;
 }
 
 /*------------
    right side css
  -------------*/
 .right_area {
-    background: #717172;
+    background: #18191A;
+    padding: 75px 10px 0px 10px;
+}
+
+/* bithday area */
+.birthday {
+    background: #242526;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.birhday_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top_one {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    color: #e4e6eb;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.top_one img {
+    margin-right: 8px;
+}
+
+.top_two {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e4e6eb;
+    font-size: 15px;
+}
+
+.top_two:hover {
+    background: #474849;
+}
+
+.top_two span {
+    font-size: 16px;
+}
+
+.birthday h3 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #e4e6eb;
+}
+
+.birthday h3 a {
+    color: #e4e6eb;
+    font-weight: 600;
+}
+
+/* sponsored area */
+.sponsored_area {}
+
+.sponsored_area h3 {
+    color: #b0b3b8;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.sponsor_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.sponsor_box img {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    margin-right: 18px;
+}
+
+.sponsor_box h4 {
+    color: #b0b3b8;
+    font-size: 15px;
+}
+
+.sponsor_box small {
+    color: #b0b3b8;
+}
+
+/* contacts area */
+.contacts_area {
+    margin-top: 15px;
+}
+
+.contacts_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.contacts_top h4 {
+    color: #b0b3b8;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contacts_top ul {
+    display: flex;
+    align-items: center;
+}
+
+.contacts_top li span {
+    color: #b0b3b8;
+    height: 32px;
+    width: 32px;
+    transition: 0.2s;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
+    font-size: 22px;
+}
+}
+
+.contacts_top li:hover span {
+    background: #474849;
+    cursor: pointer;
+}
+
+.contacts_bottom {}
+
+.contacts_bottom ul {}
+
+.contacts_bottom li {}
+
+.contacts_bottom li a {
+    display: flex;
+    align-items: center;
+    color: #e4e6eb;
+    font-size: 14px;
+    padding: 8px;
+    transition: .2s;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.contacts_bottom li:hover a {
+    background: #303031;
+
+}
+
+.contacts_bottom li a img {
+    margin-right: 10px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    object-fit: cover;
+}
+
+.group_conversation {
+    margin-top: 15px;
+}
+
+.group_conversation h4 {
+    color: #b0b3b8;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.group_conversation ul {}
+
+.group_conversation ul li {}
+
+.group_conversation ul li a {
+    display: flex;
+    align-items: center;
+    color: #e4e6eb;
+    font-size: 14px;
+    padding: 8px;
+    transition: .2s;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.group_conversation ul li:hover a {
+    background: #303031;
+}
+
+.group_conversation ul li a img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
 }
