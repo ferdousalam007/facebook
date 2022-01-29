@@ -480,7 +480,7 @@ nav ul li a .material-icons-outlined {
 }
 
 /* sponsored area */
-.sponsored_area {}
+
 
 .sponsored_area h3 {
     color: #b0b3b8;
@@ -490,10 +490,15 @@ nav ul li a .material-icons-outlined {
 }
 
 .sponsor_box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 4px;
+    transition: .2s;
+}
+.sponsor_box:hover{
+    background: #303031;
 }
 
 .sponsor_box img {
