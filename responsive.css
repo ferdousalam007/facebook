@@ -1,45 +1,84 @@
 @media screen and (max-width: 1100px) {
+
     /* //header */
-    form input{
+    form input {
         display: none;
     }
+
     .search {
         width: 40px;
     }
-    header ul li:last-child{
+
+    header ul li:last-child {
         display: block;
     }
-    nav ul li:nth-child(4){
+
+    nav ul li:nth-child(4) {
         display: none;
     }
-    .profile_section ul li:nth-child(1),.profile_section ul li:nth-child(3){
+
+    .profile_section ul li:nth-child(1),
+    .profile_section ul li:nth-child(3) {
         display: none;
     }
-   
+
     /* header end */
-    .d-non, .left_area {
+    .d-non,
+    .left_area {
         display: none;
     }
-    
+
 }
+
 /* ===================================================== */
 @media screen and (max-width: 900px) {
     .right_area {
         display: none;
     }
 }
+
 @media screen and (max-width: 804px) {
     .search_area {
         flex-basis: 92px;
     }
-    nav ul li{
+
+    nav ul li {
         display: none;
-    } 
-    nav ul{
+    }
+
+    nav ul {
         justify-content: flex-start;
     }
+
 }
+
 /* ====================================================== */
 @media screen and (max-width: 768px) {
-   
+    .d_md_none{
+        display: none;
+    }
+}
+@media screen and (max-width: 576px) {
+    .d_sm_none{
+        display: none;
+    }
+    .top_post{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top_post input{
+       max-width: 90%;
+    }
+    .bottom_post ul li {
+        padding: 8px 10px;
+    }
+}
+@media screen and (max-width: 509px) {
+    .bottom_post ul{
+        flex-direction: column;
+    }
+    .bottom_post ul li {
+        width: 100%;
+        justify-content: center;
+    }
 }

@@ -40,7 +40,7 @@ html {
 /*------------
    header css
  -------------*/
- header {
+header {
     height: 56px;
     display: flex;
     justify-content: space-between;
@@ -414,6 +414,120 @@ nav ul li a .material-icons-outlined {
     overflow: auto;
 }
 
+.story_area {
+    position: relative;
+}
+
+.slider_arrow {
+    position: absolute;
+    color: #fff;
+    right: -20px;
+    bottom: 0;
+    background: #525355;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    top: 0;
+    margin: auto 0;
+    color: #b0b3b8;
+    font-size: 22px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.slider_arrow:hover {
+    background: #5f6061;
+}
+
+.story_content {
+    display: flex;
+    align-items: center;
+}
+
+.story_box {
+    position: relative;
+    border-radius: 10px;
+    margin: 0 4px;
+    height: 240px;
+    flex-basis: 111px;
+    flex-grow: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+}
+.story_box::before {
+	width: 100%;
+	height: 100%;
+	content: "";
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	background: #00000021;
+}
+.story_box:hover::before{
+    background: #3939395e;
+}
+.story_box_text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+.story_box_text h5 {
+    font-size: 16px;
+    color: #e6e6e6;
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    line-height: 22px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.story_box:first-child h5 {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    padding: 32px 0 10px;
+    background: #202122;
+    text-align: center;
+}
+
+.story_box:first-child span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -19px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    background: #297BE5;
+    margin: 0 auto;
+    color: #fff;
+    border: 2px solid #202122;
+}
+
+.story_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s;
+}
+
+.story_box:hover img {
+	transform: scale(1.1);
+}
 /*------------
    right side css
  -------------*/
@@ -491,14 +605,15 @@ nav ul li a .material-icons-outlined {
 }
 
 .sponsor_box {
-	display: flex;
-	align-items: center;
-	margin-bottom: 15px;
-	padding: 10px;
-	border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
     transition: .2s;
 }
-.sponsor_box:hover{
+
+.sponsor_box:hover {
     background: #303031;
 }
 
@@ -553,17 +668,10 @@ nav ul li a .material-icons-outlined {
     cursor: pointer;
 }
 
-
 .contacts_top li:hover span {
     background: #474849;
     cursor: pointer;
 }
-
-.contacts_bottom {}
-
-.contacts_bottom ul {}
-
-.contacts_bottom li {}
 
 .contacts_bottom li a {
     display: flex;
@@ -588,9 +696,11 @@ nav ul li a .material-icons-outlined {
     width: 32px;
     object-fit: cover;
 }
-.contact_box{
+
+.contact_box {
     position: relative;
 }
+
 .contact_box::before {
     content: "";
     position: absolute;
@@ -638,4 +748,171 @@ nav ul li a .material-icons-outlined {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+/*-----------------
+ create post style
+ ---------------- */
+.post_area {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* post_top */
+.create_post_top {
+    padding: 15px 15px 10px;
+    margin-top: 25px;
+    background: #242526;
+    border-radius: 10px;
+}
+
+.top_post {
+    display: flex;
+    align-items: center;
+}
+
+.top_post img {
+    border-radius: 50%;
+}
+
+.top_post input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding: 10px 13px;
+    background: #3a3b3c;
+    color: #e4e6eb;
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    border-radius: 25px;
+    margin-left: 10px;
+    transition: .1s;
+}
+.top_post input:hover {
+    background: #4e4f50;
+}
+
+/* bottom_post */
+.bottom_post ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bottom_post ul li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #b0b3b8;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+    margin-top: 5px;
+    transition: .2s;
+    padding: 8px 25px;
+    border-radius: 5px;
+}
+
+.bottom_post ul li:hover {
+    background: #303031;
+    cursor: pointer;
+}
+
+.bottom_post ul li:first-child span {
+    color: #F4556F;
+    font-size: 30px;
+}
+
+.bottom_post ul li:nth-child(2) span {
+    color: #58C472;
+    font-size: 30px;
+}
+
+.bottom_post ul li:last-child span {
+    color: #F8C03E;
+    font-size: 30px;
+}
+
+/* crate post middle style */
+.create_post_middle {
+    padding: 15px 15px 10px;
+    margin-top: 25px;
+    background: #242526;
+    border-radius: 10px;
+    position: relative;
+}
+.slider_arrow_two {
+	position: absolute;
+	color: #fff;
+	right: 22px;
+	bottom: 0;
+	background: #525355;
+	height: 50px;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 50%;
+	top: 0;
+	margin: auto 0;
+	color: #b0b3b8;
+	font-size: 22px;
+	transition: .1s;
+	cursor: pointer;
+}
+.slider_arrow_two:hover {
+    background: #5f6061;
+}
+
+.create_room ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create_room ul li:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 25px;
+    height: 40px;
+    padding: 12px;
+    color: #4599ff;
+    border: 3px solid #263951;
+}
+
+.create_room ul li:first-child img {
+    border-radius: unset;
+    width: unset;
+    height: unset;
+}
+
+.create_room li img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+
+}
+
+.create_room li {
+    position: relative;
+}
+
+.create_room li::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #31A24C;
+    right: -3px;
+    bottom: 5px;
+    border: 1px solid #18191a;
+}
+
+.create_room li:first-child::after {
+    width: 0;
+    height: 0;
 }
