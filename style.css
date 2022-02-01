@@ -881,8 +881,12 @@ nav ul li a .material-icons-outlined {
     padding: 12px;
     color: #4599ff;
     border: 3px solid #263951;
+    transition: .2s;
 }
-
+.create_room ul li:first-child:hover {
+	background: #3A3B3C;
+    border: 3px solid #3f5269;
+}
 .create_room ul li:first-child img {
     border-radius: unset;
     width: unset;
