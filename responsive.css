@@ -81,6 +81,14 @@
     .create_room li:nth-child(2),.create_room li:nth-child(3),.create_room li:nth-child(4),.create_room li:nth-child(5){
         display: block;
     }
+    .comments_action p {
+        padding: 8px 8px;
+        font-size: 13px;
+        
+    }
+    .comments_action p span{
+        font-size: 15px;
+    }
 }
 @media screen and (max-width: 509px) {
     .bottom_post ul{
