@@ -72,6 +72,15 @@
     .bottom_post ul li {
         padding: 8px 10px;
     }
+    .create_room li{
+        display: none;
+    }
+    .create_room li:nth-child(1){
+        display: block;
+    }
+    .create_room li:nth-child(2),.create_room li:nth-child(3),.create_room li:nth-child(4),.create_room li:nth-child(5){
+        display: block;
+    }
 }
 @media screen and (max-width: 509px) {
     .bottom_post ul{
