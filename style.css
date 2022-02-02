@@ -993,7 +993,10 @@ nav ul li a .material-icons-outlined {
     color: #adadad;
     font-weight: 400;
 }
-
+iframe{
+    width: 100%;
+    height: auto;
+}
 .left_title p {
     display: flex;
     align-items: center;
