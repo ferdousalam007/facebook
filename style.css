@@ -152,6 +152,28 @@ nav ul li a::after {
     padding: 7px 15px 5px;
     border-radius: 5px;
 }
+[data-notification]{
+    position: relative;
+}
+[data-notification]::after {
+	content: attr(data-notification);
+	position: absolute;
+	right: 18px;
+	font-size: 13px;
+	color: #fff;
+	width: 23%;
+	height: 54%;
+	background: #E41E3F;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	font-weight: 700;
+}
+[data-notification=""]::after{
+    background: none;
+}
 
 nav ul li a:hover:after {
     display: block;
@@ -191,19 +213,18 @@ nav ul li a .material-icons-outlined {
     color: #e4e6eb;
 }
 
-.profile_section ul li span,
-.profile_section ul li i {
-    color: #e4e6eb;
-    font-size: 28px;
-    background: #3a3b3c;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    text-align: center;
-    margin-left: 8px;
-    transition: .2s;
-    cursor: pointer;
+.profile_section ul li span, .profile_section ul li i {
+	color: #e4e6eb;
+	font-size: 25px;
+	background: #3a3b3c;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 8px;
+	transition: .2s;
+	cursor: pointer;
 }
 
 .profile_section ul li:hover span,
@@ -994,8 +1015,7 @@ nav ul li a .material-icons-outlined {
     font-weight: 400;
 }
 iframe{
-    width: 100%;
-    height: auto;
+    width: 100%!important;
 }
 .left_title p {
     display: flex;
@@ -1033,6 +1053,9 @@ iframe{
     padding: 0px 15px 10px;
     color: #e4e6eb;
     font-size: 14px;
+}
+.middle_post{
+    width: 100%;
 }
 .middle_post img {
     width: 100%;
