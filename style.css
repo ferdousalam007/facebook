@@ -63,7 +63,7 @@ nav ul {
     justify-content: center;
 }
 
-header ul li:last-child {
+header nav ul li:last-child {
     display: none;
 }
 
